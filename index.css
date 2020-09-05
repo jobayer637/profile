@@ -1,0 +1,100 @@
+.container{
+    height: 500px;
+    width: 400px;
+    position: absolute;
+    right: 0; 
+    left: 0;
+    margin: auto;
+    bottom: 0; 
+    top: 0;
+    background-color:peachpuff;
+    border-radius: 30px;
+    box-shadow: -3px -3px 3px  peachpuff;
+}
+
+.room{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0; left: 0; bottom: 0; top: 0;
+    background-color: yellowgreen;
+    border-radius: 30px;
+    transform-origin: right;
+    transition: all 1.5s;
+}
+
+
+.wall{
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 100%; height: 100%;
+    background-color: yellowgreen;
+    border-radius: 30px;
+    transition: all 1.5s;
+    transform-origin:left;
+}
+
+.w-content{
+    color: indigo;
+    text-align: center;
+    padding: 20px;
+}
+
+.w-spin{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    margin: auto;
+
+    animation: mymove 9s infinite;
+    
+    border: 5px dashed red;
+}
+
+.w-spin button{
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    border: none;
+    background-color: yellowgreen;
+}
+
+@keyframes mymove{
+    0%{
+        background-color: lawngreen;
+        transform:rotate(0deg);
+        border: 5px dashed blue;
+    }
+    50%{
+        background-color: lightpink;
+        border: 5px dashed red;
+    }
+    100%{
+        background-color: mediumpurple;
+        transform:rotate(360deg);
+        border: 5px dashed yellow;
+    }
+}
+
+
+
+.content{
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    padding: 20px;
+}
+
+.content img{
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    border-radius: 50%;
+}

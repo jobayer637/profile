@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEDP | Day_7</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <i class="fab fa-500px"></i>
+    <div id="container" class="container">
+        <div id="room" class="room"></div>
+        <div id="wall" class="wall">
+            <div class="w-content">
+                <h1>Jobayer Hossain</h1>
+                <h2>Bangladesh University of Business and Technology</h2>
+                <div class="w-spin">
+                   <button>ClicK</button>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="content">
+            <img src="image/profile.jpg" alt="" height="220px" width="200px">
+            <h2>Jobayer Hossain</h2>
+            <h2>Bangladesh University of Business and Technology</h2>
+        </div>
+    </div>
+
+    <script>
+        let container = document.getElementById("container")
+        let room = document.getElementById("room");
+        let wall = document.getElementById('wall');
+        let content = document.getElementById('content')
+
+        wall.addEventListener('mouseenter', (event) => {
+            wall.style.transform = "scale(-.4, 1) skew(0, -10deg)"
+            room.style.transform = "scale(-.4, 1) skew(0, 10deg)"
+        });
+
+        container.addEventListener('mouseleave', (event) => {
+            wall.style.transform = "scale(1, 1) skew(0, 0deg)"
+            room.style.transform = "scale(1, 1) skew(0, 0deg)"
+        });
+    </script>
+</body>
+</html>
